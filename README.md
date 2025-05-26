@@ -8,6 +8,7 @@ I am a passionate and dedicated Junior Security Administrator with hands-on expe
 My goal is to continually grow in both offensive and defensive security, contributing meaningfully to the cybersecurity community.
 
 💼 Experience
+
 Junior System Administrator
 Shout-It-Now (Contract)
 📍 Kirstenhof, Tokai (Hybrid)
@@ -41,6 +42,7 @@ Totalsports (Contract)
 Responsible for sales, store duties, and meeting sales targets
 
 🎓 Education
+
 National Senior Certificate
 ID Mkhize High School
 📅 Jan 2013 – Nov 2015
@@ -48,6 +50,7 @@ ID Mkhize High School
 Focus: Business/Commerce & General Studies
 
 🛡️ Skills
+
 Cybersecurity
 
 Python
@@ -61,6 +64,7 @@ Linux
 Incident Response
 
 📜 Certifications
+
 AI For Everyone – DeepLearning.AI (May 2025)
 
 XDR Basics – Acronis MSP Academy (Oct 2024)
@@ -80,6 +84,7 @@ CPR, AED, and First Aid – Alison (Nov 2021)
 Multiple LinkedIn Learning courses in SQL, Data Analysis, Excel, Power BI, Tableau, and more
 
 🛠️ Projects
+
 Service Learning (Apr 2017 – May 2017)
 
 Entrepreneurship: Highest Profit (Business Admin 2) (Feb 2016 – Oct 2016)
