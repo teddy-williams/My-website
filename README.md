@@ -22,7 +22,6 @@ I'm Mavuso Williams, an aspiring cybersecurity professional with a passion for p
 
 **Languages:** Python, Bash, HTML/CSS  
 **Cybersecurity Tools:** Wireshark, Nmap, Burp Suite, Metasploit, Netcat
-
 **Platforms:** Linux, Windows, Git, TryHackMe, Hack The Box
 
 ---
