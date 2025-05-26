@@ -12,9 +12,9 @@ I'm Mavuso Williams, an aspiring cybersecurity professional with a passion for p
 - 💻 Currently focused on learning ethical hacking, network security, and incident response.
 - 🎯 Goal: Land a role as a junior cybersecurity analyst / SOC analyst in the near future.
 - 🌱 Currently learning:
-  - CompTIA Security+
+  - AWS Pentesting
   - TryHackMe / Hack The Box labs
-  - Python fundamentals
+  - AI Bootcamp
 
 ---
 
