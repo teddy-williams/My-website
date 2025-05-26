@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mavuso Williams | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="header-content">
+      <h1>Mavuso 'Teddy' Williams</h1>
+      <p>Junior Security Analyst & Ethical Hacker in the Making</p>
+      <button id="hireMeBtn" onclick="sendMessage()">🚀 Hire Me!</button>
+      <div id="notification" class="hidden">Your message has been sent! 🎉</div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <a href="about.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="profile">
+    <img src="me.jpg" alt="Mavuso Williams" class="profile-img">
+    <div class="intro">
+      <h2>Hello, I'm Teddy 👋</h2>
+      <p>I'm a cybersecurity enthusiast passionate about digital defense, ethical hacking, and continuous learning. My portfolio showcases my skills, certifications, and security projects. Thanks for stopping by!</p>
+      <a href="https://linkedin.com/in/mavuso-williams" target="_blank" class="btn-linkedin">🔗 Connect on LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mavuso Williams | Built with 💻 on GitHub Pages</p>
+  </footer>
+
+  <!-- Email Button Script -->
+  <script>
+    function sendMessage() {
+      window.location.href = "mailto:williamsmavuso@gmail.com?subject=Hire Me&body=Hello!%0A%0AI am interested in working with you.%0A%0ABest regards";
+      const notification = document.getElementById("notification");
+      notification.textContent = "Your message has been sent! 🎉";
+      notification.style.display = "block";
+      setTimeout(() => { notification.style.display = "none"; }, 3000);
+    }
+  </script>
+
+  <!-- Optional HMAC -->
+  <script>
+    async function getUserHMAC(userId = 'user123') {
+      try {
+        const response = await fetch('/.netlify/functions/generate-hmac');
+        const data = await response.json();
+        console.log("HMAC response:", data);
+      } catch (error) {
+        console.error('Error fetching HMAC:', error);
+      }
+    }
+  </script>
+
+  <!-- Chatbase Integration -->
+  <script>
+    (function() {
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...args) => {
+          if (!window.chatbase.q) window.chatbase.q = [];
+          window.chatbase.q.push(args);
+        };
+        const onLoad = function() {
+          const script = document.createElement("script");
+          script.src = "https://www.chatbase.co/embed.min.js";
+          script.id = "dWnI4lnudg9XflaFJ7pWv";
+          document.body.appendChild(script);
+        };
+        document.readyState === "complete" ? onLoad() : window.addEventListener("load", onLoad);
+      }
+    })();
+  </script>
+
+</body>
+</html>
