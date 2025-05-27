@@ -46,6 +46,7 @@ I'm Mavuso Williams, an aspiring cybersecurity professional with a passion for p
 - [ ] CompTIA Security+ 
 - [ ] TryHackMe: Advent of Cyber, Pre-Security Path, etc.
 - [ ] Practical Help Desk
+- [ ] Digital Forensics and Incident Response
 
 ---
 
@@ -53,7 +54,7 @@ I'm Mavuso Williams, an aspiring cybersecurity professional with a passion for p
 
 - 📧 Email: williamsmavuso@gmail.com
 - 💼 LinkedIn: https://www.linkedin.com/in/mavuso-williams
-- 🌐 Portfolio/Website: https://teddy-williams.github.io
+- 🌐 Portfolio/Website: https://teddy-williams.github.io/My-website/
 
 ---
 
