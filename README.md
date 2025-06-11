@@ -14,7 +14,7 @@ I'm Mavuso Williams, an aspiring cybersecurity professional with a passion for p
 - 🌱 Currently learning:
   - AWS Pentesting
   - TryHackMe / Hack The Box labs
-  - AI Bootcamp
+  - Cloud Computing
 
 ---
 
