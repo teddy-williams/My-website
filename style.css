@@ -1,37 +1,67 @@
-/* ====== Base Reset ====== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* === GLOBAL FONT & SPACING === */
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(to bottom right, #0f172a, #1e293b);
-  color: #f1f5f9;
-  line-height: 1.6;
-  min-height: 100vh;
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f8fa;
+  color: #1a1a1a;
+  line-height: 1.7;
+  font-size: 1.05rem;
 }
 
-/* ====== Header ====== */
-.hero {
-  text-align: center;
-  padding: 4rem 1rem;
-  position: relative;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.header-content h1 {
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 2.5rem 1rem;
+}
+
+/* === HERO HEADER (BIG TITLES) === */
+.hero h1 {
   font-size: 3rem;
-  color: #38bdf8;
-  text-shadow: 0 0 10px #38bdf8, 0 0 20px #0ea5e9;
-  animation: flicker 2s infinite;
+  margin-bottom: 0.5rem;
 }
 
-.header-content p {
-  font-size: 1.2rem;
-  color: #94a3b8;
-  margin-top: 0.5rem;
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* === SECTION HEADINGS (e.g. in Projects, About) === */
+.about-section h2,
+.contact-section h2,
+.projects-section h2,
+.education-section h2,
+.skills-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+/* === BUTTON STYLING === */
+button,
+.btn-linkedin,
+.contact-section button {
+  font-size: 1.1rem;
+  padding: 0.9rem 1.5rem;
+}
+
 }
 
 /* Flickering glow animation */
