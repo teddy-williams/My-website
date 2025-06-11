@@ -339,6 +339,20 @@ footer {
   margin-bottom: 1rem;
 }
 
+.education-section {
+  padding: 2rem;
+  color: white; /* Set text to white */
+}
+
+.education-card {
+  background-color: #1f2937; /* Dark background for contrast */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* === SKILLS SECTION === */
 .skills-section {
   display: grid;
