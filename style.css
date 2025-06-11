@@ -202,14 +202,15 @@ footer {
     gap: 0.8rem;
   }
 }
-/* ====== Projects Section - Spark Themed Cards ====== */
+
+/* === PROJECTS SECTION (Boxed Cards + Spark Theme) === */
 .projects-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 2rem;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .project-card {
@@ -248,3 +249,4 @@ footer {
   font-size: 0.75rem;
   font-weight: 600;
 }
+
