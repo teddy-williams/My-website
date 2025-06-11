@@ -8,6 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Optional Spark Animation -->
+  <div class="sparkle"></div>
+
   <header class="hero">
     <div class="header-content">
       <h1>Mavuso Williams</h1>
@@ -26,7 +29,7 @@
   </nav>
 
   <section class="profile">
-    <img src="me.jpg" alt="Mavuso Williams" class="profile-img">
+    <img src="me.jpg" alt="Mavuso Williams" class="profile-img" onerror="this.src='default.jpg';">
     <div class="intro">
       <h2>Hello, I'm Mavuso 👋</h2>
       <p>I'm a cybersecurity enthusiast passionate about digital defense, ethical hacking, and continuous learning. My portfolio showcases my skills, certifications, and security projects. Thanks for stopping by!</p>
@@ -43,7 +46,7 @@
     function sendMessage() {
       window.location.href = "mailto:williamsmavuso@gmail.com?subject=Hire Me&body=Hello!%0A%0AI am interested in working with you.%0A%0ABest regards";
       const notification = document.getElementById("notification");
-      notification.textContent = "Your message has been sent! 🎉";
+      notification.textContent = "Your email client should now open!";
       notification.style.display = "block";
       setTimeout(() => { notification.style.display = "none"; }, 3000);
     }
@@ -80,6 +83,5 @@
       }
     })();
   </script>
-
 </body>
 </html>
