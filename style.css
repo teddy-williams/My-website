@@ -1,24 +1,40 @@
-/* === GLOBAL STYLING === */
+/* === COLOR VARIABLES === */
+
+/* Default (Dark Theme) */
 :root {
-  --bg-dark: #0f172a;
+  --bg-body: #0f172a;
   --bg-card: #1e293b;
   --border: #334155;
-  --text-light: #f8fafc;
+  --text-main: #f8fafc;
   --text-muted: #94a3b8;
-  --primary: #3b82f6;   /* Blue - LinkedIn vibe */
+  --primary: #3b82f6;
   --primary-hover: #2563eb;
-  --accent: #22c55e;    /* Green only for CTA */
+  --accent: #22c55e;
 }
 
+/* Light Theme Override */
+body.light-theme {
+  --bg-body: #ffffff;
+  --bg-card: #f9fafb;
+  --border: #e2e8f0;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --accent: #16a34a;
+}
+
+/* Apply to global elements */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  background-color: var(--bg-body);
+  color: var(--text-main);
   line-height: 1.7;
   font-size: 1.05rem;
 }
+
 
 /* === HEADINGS === */
 h1, h2, h3 {
@@ -204,3 +220,4 @@ footer {
   .navbar { flex-direction: column; gap: 1rem; }
   .profile-img { width: 120px; height: 120px; }
 }
+
