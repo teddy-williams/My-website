@@ -1,21 +1,27 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mavuso Williams | Home</title>
+  <title>Mavuso Williams | Cybersecurity Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Optional Spark Animation -->
+  <div class="sparkle"></div>
+
   <header class="hero">
-    <h1>👋 Hello, I'm Mavuso Williams</h1>
-    <p>Junior Security Administrator & Cybersecurity Enthusiast</p>
-    <button id="hireMeBtn">Hire Me</button>
+    <div class="header-content">
+      <h1>Mavuso Williams</h1>
+      <p>Junior Security Analyst & Ethical Hacker in the Making</p>
+      <button id="hireMeBtn" onclick="sendMessage()">🚀 Hire Me!</button>
+      <div id="notification" class="hidden">Your message has been sent! 🎉</div>
+    </div>
   </header>
 
   <nav class="navbar">
-    <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="education.html">Education</a>
     <a href="skills.html">Skills</a>
@@ -25,18 +31,62 @@
   </nav>
 
   <section class="profile">
-    <img src="me.jpg" alt="Mavuso Williams" class="profile-img">
-    <div class="intro">
-      <p>Passionate about cybersecurity and ethical hacking, I continuously learn and explore techniques to secure systems and networks while contributing to the tech community.</p>
+    <div class="profile-container">
+      <!-- Left-side image -->
+      <div class="profile-left">
+        <img src="me-side.jpg" alt="Mavuso Williams Side View" class="profile-img side-img" onerror="this.src='default.jpg';">
+      </div>
+      <!-- Main profile image + intro -->
+      <div class="profile-main">
+        <img src="me.jpg" alt="Mavuso Williams" class="profile-img main-img" onerror="this.src='default.jpg';">
+        <div class="intro">
+          <h2>Hello, I'm Mavuso 👋</h2>
+          <p>I'm a cybersecurity enthusiast passionate about digital defense, ethical hacking, and continuous learning. My portfolio showcases my skills, certifications, and security projects. Thanks for stopping by!</p>
+          <a href="https://linkedin.com/in/mavuso-williams" target="_blank" class="btn-linkedin connect-link">🔗 Connect on LinkedIn</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Mavuso Williams | <a href="https://linkedin.com/in/mavuso-williams" target="_blank">LinkedIn</a></p>
+    <p>&copy; 2025 Mavuso Williams | Built with 💻 on GitHub Pages</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Email Button Script -->
+  <script>
+    function sendMessage() {
+      window.location.href = "mailto:williamsmavuso@gmail.com?subject=Hire Me&body=Hello!%0A%0AI am interested in working with you.%0A%0ABest regards";
+      const notification = document.getElementById("notification");
+      notification.textContent = "Your email client should now open!";
+      notification.classList.add("visible");
+      setTimeout(() => { notification.classList.remove("visible"); }, 3000);
+    }
+  </script>
+
+  <!-- Theme Toggle -->
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light-theme');
+      toggleBtn.textContent = '☀️';
+    } else {
+      toggleBtn.textContent = '🌙';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      const isLight = body.classList.contains('light-theme');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      toggleBtn.textContent = isLight ? '☀️' : '🌙';
+    });
+
+    document.querySelectorAll('a.connect-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        alert("Thanks for reaching out! 🚀 I’ll connect with you soon.");
+      });
+    });
+  </script>
 </body>
 </html>
-
-
