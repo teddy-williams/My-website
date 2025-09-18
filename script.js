@@ -18,30 +18,10 @@ toggleBtn.addEventListener('click', () => {
   toggleBtn.textContent = isLight ? '☀️' : '🌙';
 });
 
-// === HIRE ME BUTTON NOTIFICATION ===
-function sendMessage() {
-  window.location.href = "mailto:williamsmavuso@gmail.com?subject=Hire Me&body=Hello!%0A%0AI am interested in working with you.%0A%0ABest regards";
-
-  const notification = document.getElementById("notification");
-  notification.textContent = "Your email client should now open!";
-  notification.classList.add("visible");
-
-  // Hide after 3 seconds
-  setTimeout(() => {
-    notification.classList.remove("visible");
-  }, 3000);
-}
-
 // === CONNECT LINK POPUP ===
 document.querySelectorAll('a.connect-link').forEach(link => {
   link.addEventListener('click', (e) => {
-    e.preventDefault(); // optional, if you don't want immediate navigation
-    const notification = document.getElementById("notification");
-    notification.textContent = "Thanks for reaching out! 🚀 I’ll connect with you soon.";
-    notification.classList.add("visible");
-
-    setTimeout(() => {
-      notification.classList.remove("visible");
-    }, 3000);
+    e.preventDefault(); // prevent default navigation if needed
+    alert("Thanks for reaching out! 🚀 I’ll connect with you soon.");
   });
 });
