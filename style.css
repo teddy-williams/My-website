@@ -253,3 +253,25 @@ footer {
   .navbar { flex-direction: column; gap: 1rem; }
   .profile-img { width: 120px; height: 120px; }
 }
+
+/* === NOTIFICATION === */
+#notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--accent);
+  color: black;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+#notification.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
