@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects | Mavuso Williams</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="hero">
-    <h1 style="font-size: 2.75rem;">🛠️ My Projects</h1>
-    <p style="font-size: 1.2rem;">Hands-on cybersecurity, scripting, and system hardening practice</p>
+  <!-- HERO SECTION -->
+  <header class="hero" style="margin-bottom: 2rem;">
+    <h1>🛠️ My Projects</h1>
+    <p style="margin-top: 0.5rem; font-size: 1.25rem;">Hands-on cybersecurity, scripting, and system hardening practice</p>
   </header>
 
-  <nav class="navbar">
+  <!-- NAVIGATION -->
+  <nav class="navbar" style="margin-bottom: 2.5rem;">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="education.html">Education</a>
@@ -22,59 +24,72 @@
     <button id="themeToggle" aria-label="Toggle Theme">🌙</button>
   </nav>
 
-  <section class="projects-section">
-    <div class="project-card">
+  <!-- PROJECTS SECTION -->
+  <section class="projects-section" style="max-width: 900px; margin: 0 auto; padding: 0 1rem;">
+    <div class="project-card" style="margin-bottom: 2rem; padding: 2rem;">
       <h2>🔐 SSH Honeypot with Fail2Ban</h2>
       <p>Simulated brute-force attacks against an SSH server and used <strong>Fail2Ban</strong> to automatically block attackers and log their attempts.</p>
-      <span class="badge">Kali Linux</span>
-      <span class="badge">Fail2Ban</span>
-      <span class="badge">Firewall</span>
+      <div class="badges" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge">Kali Linux</span>
+        <span class="badge">Fail2Ban</span>
+        <span class="badge">Firewall</span>
+      </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" style="margin-bottom: 2rem; padding: 2rem;">
       <h2>🧪 Nmap Vulnerability Scan Report</h2>
       <p>Performed detailed scans using Nmap with custom scripts, discovered open ports and services on simulated network environments (TryHackMe).</p>
-      <span class="badge">Nmap</span>
-      <span class="badge">Bash</span>
-      <span class="badge">Enumeration</span>
+      <div class="badges" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge">Nmap</span>
+        <span class="badge">Bash</span>
+        <span class="badge">Enumeration</span>
+      </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" style="margin-bottom: 2rem; padding: 2rem;">
       <h2>📁 Windows Log Monitoring via WSL</h2>
       <p>Monitored logs on a Windows machine through a <strong>WSL</strong>-based Kali setup to track unauthorized file access and user behavior.</p>
-      <span class="badge">WSL</span>
-      <span class="badge">Kali Linux</span>
-      <span class="badge">Syslog</span>
+      <div class="badges" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge">WSL</span>
+        <span class="badge">Kali Linux</span>
+        <span class="badge">Syslog</span>
+      </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" style="margin-bottom: 2rem; padding: 2rem;">
       <h2>📄 Custom Resume Builder with HTML/CSS</h2>
       <p>Developed and hosted a fully custom resume page on GitHub Pages using semantic HTML and responsive design principles.</p>
-      <span class="badge">GitHub Pages</span>
-      <span class="badge">HTML</span>
-      <span class="badge">Responsive Design</span>
+      <div class="badges" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge">GitHub Pages</span>
+        <span class="badge">HTML</span>
+        <span class="badge">Responsive Design</span>
+      </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" style="margin-bottom: 2rem; padding: 2rem;">
       <h2>🌐 Packet Analysis with Wireshark</h2>
       <p>Used <strong>Wireshark</strong> to capture and analyze real network traffic, identifying protocols, suspicious activity, and dissecting packets for training purposes via LinkedIn Learning.</p>
-      <span class="badge">Wireshark</span>
-      <span class="badge">Network Forensics</span>
-      <span class="badge">Packet Analysis</span>
+      <div class="badges" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge">Wireshark</span>
+        <span class="badge">Network Forensics</span>
+        <span class="badge">Packet Analysis</span>
+      </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" style="margin-bottom: 2rem; padding: 2rem;">
       <h2>🕵️‍♂️ DFIR Case Using Autopsy</h2>
       <p>Performed a digital forensic investigation with <strong>Autopsy</strong> to recover and analyze disk artifacts, browser history, and file metadata during a DFIR simulation lab.</p>
-      <span class="badge">DFIR</span>
-      <span class="badge">Autopsy</span>
-      <span class="badge">Disk Analysis</span>
+      <div class="badges" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="badge">DFIR</span>
+        <span class="badge">Autopsy</span>
+        <span class="badge">Disk Analysis</span>
+      </div>
     </div>
   </section>
 
-  <footer>
+  <!-- FOOTER -->
+  <footer style="margin-top: 3rem; text-align: center;">
     <p>&copy; 2025 Mavuso Williams | Explore more on <a href="https://linkedin.com/in/mavuso-williams" target="_blank">LinkedIn</a></p>
   </footer>
 </body>
 </html>
-
