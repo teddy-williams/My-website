@@ -142,7 +142,7 @@ button,
 }
 
 /* LinkedIn button */
-.btn-linkedin {
+.connect-btn {
   background: var(--primary);
   color: white;
   text-decoration: none;
@@ -295,3 +295,4 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
