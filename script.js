@@ -23,7 +23,8 @@ document.querySelectorAll('a.connect-link').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault(); 
     alert("Thanks for reaching out! 🚀 I’ll connect with you soon.");
-    window.location.href = link.href; // redirect after alert
+    // Open LinkedIn in a new tab
+    window.open(link.href, '_blank');
   });
 });
 
@@ -39,5 +40,6 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
       console.error("EmailJS Error:", err);
     });
 });
+
 
 
