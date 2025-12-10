@@ -18,15 +18,16 @@ toggleBtn.addEventListener('click', () => {
   toggleBtn.textContent = isLight ? '☀️' : '🌙';
 });
 
-// === CONNECT LINK POPUP ===
-document.querySelectorAll('a.connect-link').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault(); 
+// === CONNECT BUTTON POPUP ===
+document.querySelectorAll('.connect-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
     alert("Thanks for reaching out! 🚀 I’ll connect with you soon.");
-    window.location.href = link.href; // redirect after alert
+
+    // Redirect using the data-link value
+    const linkedinURL = btn.getAttribute('data-link');
+    window.location.href = linkedinURL;
   });
 });
-
 
 document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -39,6 +40,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
       console.error("EmailJS Error:", err);
     });
 });
+
 
 
 
