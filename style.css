@@ -149,7 +149,7 @@ button,
   display: inline-block;
 }
 
-.btn-linkedin:hover {
+.connect-btn:hover {
   background: var(--primary-hover);
 }
 
@@ -295,4 +295,5 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
 
