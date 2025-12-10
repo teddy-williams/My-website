@@ -21,9 +21,12 @@ toggleBtn.addEventListener('click', () => {
 // === CONNECT LINK POPUP ===
 document.querySelectorAll('a.connect-link').forEach(link => {
   link.addEventListener('click', (e) => {
+    e.preventDefault(); 
     alert("Thanks for reaching out! 🚀 I’ll connect with you soon.");
+    window.location.href = link.href; // redirect after alert
   });
 });
+
 
 document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -36,4 +39,5 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
       console.error("EmailJS Error:", err);
     });
 });
+
 
