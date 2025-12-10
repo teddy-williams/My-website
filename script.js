@@ -20,7 +20,7 @@ toggleBtn.addEventListener('click', () => {
 
 // === CONNECT BUTTON POPUP ===
 document.querySelectorAll('.connect-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', (e) => {
     alert("Thanks for reaching out! 🚀 I’ll connect with you soon.");
 
     const linkedinURL = btn.getAttribute('data-link');
@@ -39,6 +39,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
       console.error("EmailJS Error:", err);
     });
 });
+
 
 
 
