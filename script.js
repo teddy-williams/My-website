@@ -23,7 +23,6 @@ document.querySelectorAll('.connect-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     alert("Thanks for reaching out! 🚀 I’ll connect with you soon.");
 
-    // Redirect using the data-link value
     const linkedinURL = btn.getAttribute('data-link');
     window.location.href = linkedinURL;
   });
@@ -40,6 +39,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
       console.error("EmailJS Error:", err);
     });
 });
+
 
 
 
