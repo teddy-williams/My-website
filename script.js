@@ -20,7 +20,7 @@ toggleBtn.addEventListener('click', () => {
 
 // === CONNECT BUTTON POPUP ===
 document.querySelectorAll('.connect-btn').forEach(btn => {
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener('click', () => {
     alert("Thanks for reaching out! 🚀 I’ll connect with you soon.");
 
     // Redirect using the data-link value
@@ -40,6 +40,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
       console.error("EmailJS Error:", err);
     });
 });
+
 
 
 
