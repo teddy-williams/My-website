@@ -28,17 +28,24 @@ document.querySelectorAll('.connect-btn').forEach(btn => {
   });
 });
 
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
+// === CONTACT FORM
+const contactForm = document.getElementById("contact-form");
 
-  emailjs.sendForm("service_g1v3nvn", "template_a7lajve", this)
-    .then(() => {
-      alert("✅ Message sent successfully!");
-    }, (err) => {
-      alert("❌ Failed to send message. Please try again.");
-      console.error("EmailJS Error:", err);
-    });
-});
+if (contactForm) {
+  contactForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_g1v3nvn", "template_a7lajve", this)
+      .then(() => {
+        alert("✅ Message sent successfully!");
+      }, (err) => {
+        alert("❌ Failed to send message. Please try again.");
+        console.error("EmailJS Error:", err);
+      });
+  });
+}
+
+
 
 
 
