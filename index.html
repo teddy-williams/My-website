@@ -1,81 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mavuso Williams | Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="script.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<section class="profile" style="margin-bottom: 3rem;">
+  <img src="me.jpg" alt="Mavuso Williams" class="profile-img" onerror="this.src='default.jpg';" />
+  <div class="intro" style="margin-top: 1.5rem;">
+    <h2>Hello, I'm Mavuso 👋</h2>
+    <p style="margin-bottom: 1.5rem; line-height: 1.8;">
+      I'm a cybersecurity enthusiast passionate about digital defense, ethical hacking, and continuous learning. 
+      My portfolio showcases my skills, certifications, and security projects.</br> Thanks for stopping by!
+    </p>
+
+    <!-- CONNECT BUTTON -->
+    <button class="connect-btn" data-link="https://www.linkedin.com/in/mavuso-williams">
+      🔗 Connect on LinkedIn
+    </button>
+  </div>
+</section>   <!-- <-- moved here -->
+
+<!-- CHATBASE SCRIPT (leave outside section) -->
 <script>
-  (function(){
-    emailjs.init("Public_key"); // replace with your Public Key
-  })();
+(function(){
+  if(!window.chatbase || window.chatbase("getState") !== "initialized"){
+    window.chatbase = (...arguments) => {
+      if(!window.chatbase.q){ window.chatbase.q = [] }
+      window.chatbase.q.push(arguments)
+    };
+    window.chatbase = new Proxy(window.chatbase, {
+      get(target, prop){
+        if(prop === "q"){ return target.q }
+        return (...args) => target(prop, ...args);
+      }
+    });
+  }
+  const onLoad = function(){
+    const script = document.createElement("script");
+    script.src="https://www.chatbase.co/embed.min.js";
+    script.id="dWnI4lnudg9XflaFJ7pWv";
+    script.domain="www.chatbase.co";
+    document.body.appendChild(script);
+  };
+  if(document.readyState==="complete"){ onLoad() }
+  else { window.addEventListener("load", onLoad) }
+})();
 </script>
-
-</head>
-<body>
-  <!-- Optional Spark Animation -->
-  <div class="sparkle"></div>
-
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <div class="header-content" style="margin-bottom: 2rem;">
-      <h1>Mavuso Williams</h1>
-      <p style="margin-bottom: 2rem; font-size: 1.25rem;">Junior Security Analyst & Ethical Hacker in the Making</p>
-      <div id="notification" class="hidden"></div>
-    </div>
-  </header>
-
-  <!-- NAVIGATION -->
-  <nav class="navbar" style="margin-bottom: 2.5rem;">
-    <a href="about.html">About</a>
-    <a href="education.html">Education</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    <button id="themeToggle" aria-label="Toggle Theme">🌙</button>
-  </nav>
-
-  <!-- PROFILE SECTION -->
-  <section class="profile" style="margin-bottom: 3rem;">
-    <img src="me.jpg" alt="Mavuso Williams" class="profile-img" onerror="this.src='default.jpg';" />
-    <div class="intro" style="margin-top: 1.5rem;">
-      <h2>Hello, I'm Mavuso 👋</h2>
-      <p style="margin-bottom: 1.5rem; line-height: 1.8;">
-        I'm a cybersecurity enthusiast passionate about digital defense, ethical hacking, and continuous learning. 
-        My portfolio showcases my skills, certifications, and security projects.</br> Thanks for stopping by!
-      </p>
-      <!-- Connect button using new notification system -->
-      <button class="connect-btn" data-link="https://www.linkedin.com/in/mavuso-williams">🔗 Connect on LinkedIn</button>
-    </div>
-    </section>
-  
-<script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="dWnI4lnudg9XflaFJ7pWv";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
-  
-  <!-- FOOTER -->
-  <footer style="margin-top: 3rem;">
-    <p>&copy; 2025 | Mavuso Williams</p>
-  </footer>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
