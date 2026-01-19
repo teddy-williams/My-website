@@ -52,8 +52,8 @@ I'm Mavuso Williams, an aspiring cybersecurity professional with a passion for p
 ## 📫 Let's Connect
 
 - 📧 Email: williamsmavuso@gmail.com
-- 💼 LinkedIn: https://www.linkedin.com/in/mavuso-williams
-- 🌐 Portfolio/Website: https://teddy-williams.github.io/My-website/
+- 💼 LinkedIn: www.linkedin.com/in/mavuso-williams
+- 🌐 Portfolio/Website: www.teddy-williams.github.io/My-website/
 
 ---
 
