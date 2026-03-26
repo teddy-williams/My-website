@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Mavuso Williams</title>
+  <meta name="description" content="The story of Mavuso Williams — SOC analyst, Cape Town native, and perpetual learner." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .about-hero { padding: 5rem 0 4rem; border-bottom: 1px solid var(--border); }
+    .about-hero__grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center; }
+    .about-photo-wrap { position: relative; }
+    .about-photo {
+      width: 100%; aspect-ratio: 3/4; border-radius: 16px;
+      background: var(--cream-dark); border: 1px solid var(--border);
+      overflow: hidden; display: flex; align-items: center; justify-content: center;
+    }
+    .about-photo img { width:100%; height:100%; object-fit:cover; }
+    .about-photo-placeholder { color:var(--ink-faint); font-family:var(--font-mono); font-size:12px; text-align:center; }
+    .about-photo-placeholder svg { width:48px; margin:0 auto 10px; display:block; opacity:0.25; }
+    .cert-badge {
+      position: absolute; bottom: -16px; right: -16px;
+      background: var(--ink); color: var(--cream);
+      font-family: var(--font-mono); font-size: 11px;
+      padding: 10px 16px; border-radius: 10px; line-height: 1.6;
+    }
+    .cert-badge strong { display:block; color: var(--purple-mid); font-size:13px; }
+
+    .about-text .hero__eyebrow { font-family:var(--font-mono); font-size:12px; color:var(--purple); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.8rem; }
+    .about-text h1 { font-family:var(--font-display); font-size:clamp(2rem,3.5vw,3rem); line-height:1.1; margin-bottom:1.5rem; }
+    .about-text h1 em { font-style:italic; color:var(--purple); }
+    .about-text p { color:var(--ink-muted); line-height:1.85; margin-bottom:1.2rem; }
+
+    .values-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1.2rem; margin-top:1rem; }
+    .value-card { background:var(--cream-dark); border:1px solid var(--border); border-radius:var(--radius); padding:1.4rem; }
+    .value-card__icon { font-size:1.4rem; margin-bottom:0.6rem; }
+    .value-card__title { font-weight:500; font-size:15px; margin-bottom:0.4rem; }
+    .value-card__text { font-size:13px; color:var(--ink-muted); line-height:1.65; }
+
+    .skills-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .skill-group__label { font-family:var(--font-mono); font-size:11px; color:var(--purple); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1rem; }
+    .skill-bar { margin-bottom:12px; }
+    .skill-bar__name { font-size:13px; font-weight:500; margin-bottom:5px; display:flex; justify-content:space-between; }
+    .skill-bar__name span { font-weight:400; color:var(--ink-faint); font-family:var(--font-mono); font-size:11px; }
+    .skill-bar__track { height:5px; background:var(--cream-dark); border-radius:3px; overflow:hidden; border:1px solid var(--border); }
+    .skill-bar__fill { height:100%; background:var(--purple); border-radius:3px; width:0; transition:width 1s ease; }
+
+    @media(max-width:768px){
+      .about-hero__grid{grid-template-columns:1fr; gap:3rem;}
+      .cert-badge{right:0;}
+      .skills-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">MW://</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="ask.html" class="nav--ask">Ask Mavuso ✦</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+
+      <!-- Hero -->
+      <div class="about-hero">
+        <div class="about-hero__grid">
+          <div class="about-photo-wrap fade-up">
+            <div class="about-photo">
+              <!-- <img src="img/mavuso.jpg" alt="Mavuso Williams" /> -->
+              <div class="about-photo-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                  <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+                </svg>
+                <img src="img/mavuso.jpg" alt="Mavuso Williams" />
+              </div>
+            </div>
+            <div class="cert-badge">
+              <strong>ITIL Certified</strong>
+              TryHackMe Top 1%
+            </div>
+          </div>
+
+          <div class="about-text">
+            <p class="hero__eyebrow">My story</p>
+            <h1>Mavuso <em>Williams</em></h1>
+            <p>
+              I grew up in Cape Town — a city that teaches you to be resourceful, creative, and
+              a little scrappy. Those traits ended up serving me well in cybersecurity.
+            </p>
+            <p>
+              I started as someone who just liked taking things apart to see how they worked.
+              Eventually that curiosity found its direction: I wanted to understand how systems
+              could be broken — so I could help protect them.
+            </p>
+            <p>
+              Today I work as an entry-level SOC Analyst, focused on threat detection, SIEM tuning,
+              and the daily art of separating signal from noise in an alert queue. I'm ITIL certified,
+              and I've spent hundreds of hours in hands-on security labs — enough to land in the
+              <strong>top 1% on TryHackMe</strong> globally.
+            </p>
+            <p>
+              This site is where I share what I learn, document my journey, and occasionally
+              write about life beyond the terminal.
+            </p>
+            <div class="tags" style="margin-top:1.5rem">
+              <span class="tag tag--purple">SOC Analysis</span>
+              <span class="tag tag--purple">Threat Detection</span>
+              <span class="tag tag--purple">SIEM</span>
+              <span class="tag tag--teal">ITIL Certified</span>
+              <span class="tag tag--teal">TryHackMe Top 1%</span>
+              <span class="tag">Cape Town 🌍</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Values -->
+      <section class="section">
+        <div class="section__header fade-up">
+          <span class="section__num">01</span>
+          <h2 class="section__title">What drives me</h2>
+          <span class="section__line"></span>
+        </div>
+        <div class="values-grid">
+          <div class="value-card fade-up" data-delay="0">
+            <div class="value-card__icon">🔍</div>
+            <p class="value-card__title">Curiosity over credentials</p>
+            <p class="value-card__text">Certifications open doors — but genuine curiosity is what keeps you growing once you're through them.</p>
+          </div>
+          <div class="value-card fade-up" data-delay="100">
+            <div class="value-card__icon">🛡️</div>
+            <p class="value-card__title">Defence as craft</p>
+            <p class="value-card__text">Good security isn't just tools and rules. It's pattern recognition, intuition, and knowing when something feels off.</p>
+          </div>
+          <div class="value-card fade-up" data-delay="200">
+            <div class="value-card__icon">✍️</div>
+            <p class="value-card__title">Writing to think</p>
+            <p class="value-card__text">If I can't explain it simply, I don't understand it well enough. Writing forces clarity.</p>
+          </div>
+          <div class="value-card fade-up" data-delay="300">
+            <div class="value-card__icon">🌍</div>
+            <p class="value-card__title">Representing Cape Town</p>
+            <p class="value-card__text">Breaking into global tech from South Africa means showing others it's possible. That matters to me.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section section--alt" style="margin:0 -2rem; padding:4rem 2rem;">
+        <div class="section__header fade-up">
+          <span class="section__num">02</span>
+          <h2 class="section__title">Skills & tools</h2>
+          <span class="section__line"></span>
+        </div>
+        <div class="skills-grid fade-up">
+          <div>
+            <p class="skill-group__label">Security</p>
+            <div class="skill-bar">
+              <p class="skill-bar__name">Threat Detection <span>Advanced</span></p>
+              <div class="skill-bar__track"><div class="skill-bar__fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar">
+              <p class="skill-bar__name">SIEM (Splunk / ELK) <span>Intermediate</span></p>
+              <div class="skill-bar__track"><div class="skill-bar__fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar">
+              <p class="skill-bar__name">Incident Response <span>Intermediate</span></p>
+              <div class="skill-bar__track"><div class="skill-bar__fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-bar">
+              <p class="skill-bar__name">Network Analysis <span>Intermediate</span></p>
+              <div class="skill-bar__track"><div class="skill-bar__fill" data-width="68"></div></div>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group__label">Tools & platforms</p>
+            <div class="skill-bar">
+              <p class="skill-bar__name">TryHackMe / Labs <span>Top 1%</span></p>
+              <div class="skill-bar__track"><div class="skill-bar__fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-bar">
+              <p class="skill-bar__name">Linux / CLI <span>Comfortable</span></p>
+              <div class="skill-bar__track"><div class="skill-bar__fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar">
+              <p class="skill-bar__name">Python scripting <span>Developing</span></p>
+              <div class="skill-bar__track"><div class="skill-bar__fill" data-width="55"></div></div>
+            </div>
+            <div class="skill-bar">
+              <p class="skill-bar__name">ITIL Service Mgmt <span>Certified</span></p>
+              <div class="skill-bar__track"><div class="skill-bar__fill" data-width="82"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section" style="text-align:center;">
+        <div class="fade-up">
+          <h2 class="section__title" style="margin-bottom:1rem;">Want to know more?</h2>
+          <p style="color:var(--ink-muted); margin-bottom:2rem; max-width:440px; margin-inline:auto;">
+            Try the AI version of me — it can answer questions about my background,
+            skills, and experience.
+          </p>
+          <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+            <a href="ask.html" class="btn btn--primary">✦ Ask my AI →</a>
+            <a href="contact.html" class="btn btn--outline">Get in touch</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer container">
+      <span class="footer__copy">© 2026 <span>Mavuso Williams</span> — Cape Town</span>
+      <span>Built with care, no frameworks harmed</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Animate skill bars when they scroll into view
+    const bars = document.querySelectorAll('.skill-bar__fill');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.width = e.target.dataset.width + '%';
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    bars.forEach(b => obs.observe(b));
+  </script>
+</body>
+</html>

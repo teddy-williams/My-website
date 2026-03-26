@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing — Mavuso Williams</title>
+  <meta name="description" content="Thoughts on cybersecurity, learning, Cape Town, and life." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">MW://</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="ask.html" class="nav--ask">Ask Mavuso ✦</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+
+      <div class="blog-hero fade-up">
+        <p class="blog-hero__eyebrow">Writing</p>
+        <h1 class="blog-hero__title">Thoughts from the terminal &amp; beyond</h1>
+        <p class="blog-hero__sub">Security deep-dives, learning notes, Cape Town dispatches, and whatever else I can't stop thinking about.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="blog-filters fade-up">
+        <button class="filter-btn active" data-filter="all">All posts</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn" data-filter="learning">Learning</button>
+        <button class="filter-btn" data-filter="cape-town">Cape Town</button>
+        <button class="filter-btn" data-filter="life">Life</button>
+      </div>
+
+      <!-- Posts grid -->
+      <div class="blog-grid">
+
+        <a href="posts/what-is-a-soc.html" class="blog-card fade-up" data-category="security">
+          <div class="blog-card__thumb">
+            <span class="blog-card__category-strip cat--security">Security</span>
+            <span class="blog-card__thumb-placeholder">[ cover image ]</span>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span>26 Mar 2026</span><span>·</span><span>5 min read</span>
+            </div>
+            <h2 class="blog-card__title">What actually happens inside a SOC?</h2>
+            <p class="blog-card__excerpt">Most people think it's just staring at dashboards all day. The reality is messier, more human, and more interesting than that.</p>
+            <div class="blog-card__footer">
+              <span class="blog-card__read">Read more →</span>
+              <span class="blog-card__time">5 min</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="posts/tryhackme-journey.html" class="blog-card fade-up" data-category="learning" data-delay="100">
+          <div class="blog-card__thumb">
+            <span class="blog-card__category-strip cat--learning">Learning</span>
+            <span class="blog-card__thumb-placeholder">[ cover image ]</span>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span>18 Mar 2026</span><span>·</span><span>7 min read</span>
+            </div>
+            <h2 class="blog-card__title">How I got into the TryHackMe top 1%</h2>
+            <p class="blog-card__excerpt">It wasn't a grind. It was genuine curiosity, a good playlist, and a lot of late nights in Cape Town.</p>
+            <div class="blog-card__footer">
+              <span class="blog-card__read">Read more →</span>
+              <span class="blog-card__time">7 min</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="posts/cape-town-tech.html" class="blog-card fade-up" data-category="cape-town" data-delay="200">
+          <div class="blog-card__thumb">
+            <span class="blog-card__category-strip cat--cape-town">Cape Town</span>
+            <span class="blog-card__thumb-placeholder">[ cover image ]</span>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span>5 Mar 2026</span><span>·</span><span>6 min read</span>
+            </div>
+            <h2 class="blog-card__title">Breaking into cybersecurity from Cape Town</h2>
+            <p class="blog-card__excerpt">The African tech scene is growing fast — but there are still real barriers. Here's how I navigated them.</p>
+            <div class="blog-card__footer">
+              <span class="blog-card__read">Read more →</span>
+              <span class="blog-card__time">6 min</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="posts/siem-first-weeks.html" class="blog-card fade-up" data-category="security" data-delay="0">
+          <div class="blog-card__thumb">
+            <span class="blog-card__category-strip cat--security">Security</span>
+            <span class="blog-card__thumb-placeholder">[ cover image ]</span>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span>20 Feb 2026</span><span>·</span><span>8 min read</span>
+            </div>
+            <h2 class="blog-card__title">My first weeks tuning a SIEM: what I got wrong</h2>
+            <p class="blog-card__excerpt">Alert fatigue is real. Here's what I learned building detection rules that actually matter — and the ones that created noise.</p>
+            <div class="blog-card__footer">
+              <span class="blog-card__read">Read more →</span>
+              <span class="blog-card__time">8 min</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="posts/itil-worth-it.html" class="blog-card fade-up" data-category="learning" data-delay="100">
+          <div class="blog-card__thumb">
+            <span class="blog-card__category-strip cat--learning">Learning</span>
+            <span class="blog-card__thumb-placeholder">[ cover image ]</span>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span>8 Feb 2026</span><span>·</span><span>4 min read</span>
+            </div>
+            <h2 class="blog-card__title">Is ITIL certification worth it for a security analyst?</h2>
+            <p class="blog-card__excerpt">Short answer: yes, but not for the reason most people say. Here's my take after getting certified.</p>
+            <div class="blog-card__footer">
+              <span class="blog-card__read">Read more →</span>
+              <span class="blog-card__time">4 min</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="posts/cape-town-life.html" class="blog-card fade-up" data-category="life" data-delay="200">
+          <div class="blog-card__thumb">
+            <span class="blog-card__category-strip cat--life">Life</span>
+            <span class="blog-card__thumb-placeholder">[ cover image ]</span>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span>1 Jan 2026</span><span>·</span><span>3 min read</span>
+            </div>
+            <h2 class="blog-card__title">A year of first times</h2>
+            <p class="blog-card__excerpt">Reflections on starting a career, starting a site, and finally starting to write things down.</p>
+            <div class="blog-card__footer">
+              <span class="blog-card__read">Read more →</span>
+              <span class="blog-card__time">3 min</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer container">
+      <span class="footer__copy">© 2026 <span>Mavuso Williams</span> — Cape Town</span>
+      <span>Built with care, no frameworks harmed</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>

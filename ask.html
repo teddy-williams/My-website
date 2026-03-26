@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ask Mavuso — AI Q&A</title>
+  <meta name="description" content="Ask anything about Mavuso Williams — his background, skills, experience, and more." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .ask-hero {
+      padding: 5rem 0 3rem;
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .ask-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--purple);
+      background: var(--purple-light);
+      border: 1px solid var(--purple-mid);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.06em;
+    }
+    .ask-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: var(--ink);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+    .ask-hero h1 em { font-style: italic; color: var(--purple); }
+    .ask-hero p { color: var(--ink-muted); line-height: 1.8; margin-bottom: 1rem; }
+
+    /* Chat container — drop your chatbot iframe or embed here */
+    .chat-container {
+      max-width: 720px;
+      margin: 0 auto 5rem;
+      background: var(--cream-dark);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .chat-topbar {
+      background: var(--ink);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .chat-topbar__dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--purple-mid);
+    }
+    .chat-topbar__label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--cream);
+      letter-spacing: 0.06em;
+    }
+    .chat-topbar__status {
+      margin-left: auto;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--ink-faint);
+    }
+
+    /* ── EMBED YOUR CHATBOT HERE ────────────────────────────────
+       Replace the placeholder below with your actual chatbot embed.
+       Options:
+         1. An <iframe> pointing to your hosted chatbot URL
+         2. A JavaScript widget script tag
+         3. A React/Vue component if you build it in
+
+       Example iframe:
+       <iframe
+         src="https://your-chatbot-url.com"
+         style="width:100%; height:560px; border:none;"
+         title="Ask Mavuso AI"
+       ></iframe>
+    ──────────────────────────────────────────────────────────── -->
+    .chat-placeholder {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--ink-faint);
+      font-family: var(--font-mono);
+      font-size: 13px;
+    }
+    .chat-placeholder__icon {
+      font-size: 2.5rem;
+      opacity: 0.4;
+    }
+    .chat-placeholder code {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: var(--purple);
+    }
+
+    .suggested-qs {
+      max-width: 720px;
+      margin: 0 auto 4rem;
+    }
+    .suggested-qs__label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    .suggested-qs__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .suggested-q {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 13px;
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .suggested-q:hover {
+      border-color: var(--purple-mid);
+      color: var(--purple);
+      background: var(--purple-light);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">MW://</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="ask.html" class="nav--ask">Ask Mavuso ✦</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+
+      <div class="ask-hero fade-up">
+        <span class="ask-hero__badge">✦ AI-powered</span>
+        <h1>Ask <em>Mavuso</em> anything</h1>
+        <p>
+          This is a version of me that never sleeps. Ask it about my background,
+          skills, experience, certifications, how I got into security,
+          or what I'm working on — it knows my story.
+        </p>
+        <p style="font-size:14px; color:var(--ink-faint);">
+          Built by me, powered by my own chatbot project.
+        </p>
+      </div>
+
+      <!-- Suggested questions -->
+      <div class="suggested-qs fade-up">
+        <p class="suggested-qs__label">Try asking...</p>
+        <div class="suggested-qs__grid">
+          <span class="suggested-q">What does Mavuso do for work?</span>
+          <span class="suggested-q">What certifications does he have?</span>
+          <span class="suggested-q">How did he get into cybersecurity?</span>
+          <span class="suggested-q">What's his TryHackMe rank?</span>
+          <span class="suggested-q">Is he open to new opportunities?</span>
+          <span class="suggested-q">Where is he based?</span>
+          <span class="suggested-q">What tools does he know?</span>
+        </div>
+      </div>
+
+      <!-- Chatbot embed area -->
+      <div class="chat-container fade-up">
+        <div class="chat-topbar">
+          <div class="chat-topbar__dot"></div>
+          <span class="chat-topbar__label">MAVUSO.AI // PERSONAL ASSISTANT</span>
+          <span class="chat-topbar__status">// ready</span>
+        </div>
+
+        <iframe
+    src="https://www.chatbase.co/chatbot-iframe/dWnI4lnudg9XflaFJ7pWv"
+    width="100%"
+    style="height: 100%; min-height: 700px"
+    frameborder="0"
+></iframe>
+        <div class="chat-placeholder">
+          <span class="chat-placeholder__icon">🤖</span>
+          
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer container">
+      <span class="footer__copy">© 2026 <span>Mavuso Williams</span> — Cape Town</span>
+      <span>Built with care, no frameworks harmed</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
