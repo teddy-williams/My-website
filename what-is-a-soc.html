@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What actually happens inside a SOC? — Mavuso Williams</title>
+  <meta name="description" content="Most people think it's just staring at dashboards all day. The reality is messier, more human, and more interesting than that." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/blog.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav__logo">MW://</a>
+    <ul class="nav__links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../writing.html">Writing</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../ask.html" class="nav--ask">Ask Mavuso ✦</a></li>
+    </ul>
+    <button class="nav__toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="page">
+    <div class="container">
+      <div class="post-layout">
+
+        <!-- Main content -->
+        <article class="post-main">
+          <header class="post-header">
+            <a href="../writing.html" class="post-header__back">← Back to writing</a>
+            <span class="post-header__cat">Security</span>
+            <h1 class="post-header__title">What actually happens inside a SOC?</h1>
+            <div class="post-header__meta">
+              <span>Mavuso Williams</span>
+              <span>·</span>
+              <span>26 Mar 2026</span>
+              <span>·</span>
+              <span>5 min read</span>
+            </div>
+          </header>
+
+          <div class="post-body">
+            <p>
+              Most people's mental image of a Security Operations Centre is a darkened room full of
+              monitors, someone dramatically typing at a keyboard while red alerts flash across the wall.
+              The reality is both more mundane and more interesting than that.
+            </p>
+
+            <h2 id="what-soc-does">What a SOC actually does</h2>
+            <p>
+              At its core, a SOC exists to detect, investigate, and respond to security threats — in
+              real time, around the clock. But that description flattens a lot of nuance. The work is
+              fundamentally about <em>decision-making under uncertainty</em>.
+            </p>
+            <p>
+              Every day, thousands of alerts get generated. The job isn't to respond to all of them —
+              that would be impossible. The job is to figure out which ones matter, as fast as possible,
+              with incomplete information.
+            </p>
+
+            <h2 id="the-alert-queue">The alert queue: signal vs noise</h2>
+            <p>
+              Your SIEM — whether that's Splunk, Elastic, Microsoft Sentinel, or something else —
+              is constantly ingesting logs and firing alerts based on rules you (or your vendor) have defined.
+              A new analyst is often surprised by how many of those alerts are false positives.
+            </p>
+            <blockquote>
+              Alert fatigue is the enemy. When everything looks urgent, nothing is.
+            </blockquote>
+            <p>
+              Tuning detection rules to reduce noise without missing real threats is one of the most
+              skilled parts of the job — and one of the most underappreciated.
+            </p>
+
+            <h2 id="the-human-side">The human side nobody talks about</h2>
+            <p>
+              What surprised me most when I started was how much communication matters.
+              When you find something that looks like a real incident, you don't just work it silently.
+              You document as you go, you escalate to the right people at the right time,
+              and you often have to explain complex technical findings to non-technical stakeholders
+              in plain language — under pressure.
+            </p>
+            <p>
+              That's a skill set that goes well beyond knowing your tools.
+            </p>
+
+            <h2 id="entry-level-reality">Entry-level reality check</h2>
+            <p>
+              Coming in as a Tier 1 analyst, the bulk of your work is triage. You're the first pair
+              of eyes on most alerts. You learn to quickly assess: is this a real threat, a misconfigured
+              rule, or just normal business activity that looks suspicious to the SIEM?
+            </p>
+            <p>
+              It's repetitive in places. But every few weeks, you'll work something genuinely interesting —
+              a lateral movement pattern that almost slipped through, a phishing campaign that targeted
+              your organisation specifically, a misconfigured S3 bucket that nobody knew was public.
+              Those are the moments that make the repetition worth it.
+            </p>
+
+            <p style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border); color:var(--ink-faint); font-size:14px;">
+              Have questions about breaking into SOC work, or want to share your own experience?
+              <a href="../contact.html">Get in touch</a> — or <a href="../ask.html">ask my AI</a>.
+            </p>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="post-sidebar">
+          <div class="sidebar-card">
+            <p class="sidebar-card__label">In this post</p>
+            <ul class="toc-list">
+              <li><a href="#what-soc-does">What a SOC actually does</a></li>
+              <li><a href="#the-alert-queue">The alert queue</a></li>
+              <li><a href="#the-human-side">The human side</a></li>
+              <li><a href="#entry-level-reality">Entry-level reality check</a></li>
+            </ul>
+          </div>
+          <div class="sidebar-card">
+            <p class="sidebar-card__label">Written by</p>
+            <p style="font-size:14px; font-weight:500; margin-bottom:4px;">Mavuso Williams</p>
+            <p style="font-size:13px; color:var(--ink-faint); margin-bottom:10px;">SOC Analyst · Cape Town</p>
+            <a href="../about.html" style="font-family:var(--font-mono); font-size:12px; color:var(--purple);">Read full bio →</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer container">
+      <span class="footer__copy">© 2026 <span>Mavuso Williams</span> — Cape Town</span>
+      <span>Built with care, no frameworks harmed</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/blog.js"></script>
+</body>
+</html>
