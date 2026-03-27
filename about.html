@@ -13,9 +13,15 @@
     .about-photo {
       width: 100%; aspect-ratio: 3/4; border-radius: 16px;
       background: var(--cream-dark); border: 1px solid var(--border);
-      overflow: hidden; display: flex; align-items: center; justify-content: center;
+      overflow: hidden; position: relative;
     }
-    .about-photo img { width:100%; height:100%; object-fit:cover; }
+    .about-photo img {
+     position: absolute;
+     top: 0; left: 0;
+     width: 100%; height: 100%;
+     object-fit: cover;
+     object-position: center top;
+    }
     .about-photo-placeholder { color:var(--ink-faint); font-family:var(--font-mono); font-size:12px; text-align:center; }
     .about-photo-placeholder svg { width:48px; margin:0 auto 10px; display:block; opacity:0.25; }
     .cert-badge {
