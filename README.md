@@ -1,4 +1,4 @@
-# mavuso-williams.github.io
+# Welcome to my world
 
 Personal website for **Mavuso Williams** — Aspiring SOC Analyst, threat detection enthusiast, TryHackMe Top 1%, and Cape Town native.
 
