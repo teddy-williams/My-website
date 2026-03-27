@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What actually happens inside a SOC? — Mavuso Williams</title>
-  <meta name="description" content="Most people think it's just staring at dashboards all day. The reality is messier, more human, and more interesting than that." />
+  <meta name="description" content="A realistic look at how Security Operations Centers actually work — from alerts to analysis, based on hands-on learning and labs." />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/blog.css" />
 </head>
@@ -19,9 +19,6 @@
       <li><a href="../contact.html">Contact</a></li>
       <li><a href="../ask.html" class="nav--ask">Ask Mavuso ✦</a></li>
     </ul>
-    <button class="nav__toggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
   </nav>
 
   <main class="page">
@@ -44,67 +41,124 @@
           </header>
 
           <div class="post-body">
+
             <p>
-              Most people's mental image of a Security Operations Centre is a darkened room full of
-              monitors, someone dramatically typing at a keyboard while red alerts flash across the wall.
-              The reality is both more mundane and more interesting than that.
+              When I first heard about a Security Operations Center (SOC), I pictured a high-pressure environment —
+              analysts watching dashboards, stopping attacks in real time.
+            </p>
+
+            <p>
+              After spending time working through hands-on labs and learning how SOC workflows actually operate,
+              I realised the reality is different — less dramatic, but far more structured and skill-driven.
             </p>
 
             <h2 id="what-soc-does">What a SOC actually does</h2>
+
             <p>
-              At its core, a SOC exists to detect, investigate, and respond to security threats — in
-              real time, around the clock. But that description flattens a lot of nuance. The work is
-              fundamentally about <em>decision-making under uncertainty</em>.
+              At its core, a SOC exists to detect, investigate, and respond to potential security threats.
+              Most of this starts with logs — data from systems, networks, and applications — which are
+              collected and analysed through tools like SIEM platforms.
             </p>
+
             <p>
-              Every day, thousands of alerts get generated. The job isn't to respond to all of them —
-              that would be impossible. The job is to figure out which ones matter, as fast as possible,
-              with incomplete information.
+              These systems generate alerts based on predefined rules. For example:
+            </p>
+
+            <ul>
+              <li>Multiple failed login attempts</li>
+              <li>Unusual network traffic</li>
+              <li>Suspicious processes or commands</li>
+            </ul>
+
+            <p>
+              But one thing becomes clear quickly: not every alert is a real threat.
             </p>
 
             <h2 id="the-alert-queue">The alert queue: signal vs noise</h2>
+
             <p>
-              Your SIEM — whether that's Splunk, Elastic, Microsoft Sentinel, or something else —
-              is constantly ingesting logs and firing alerts based on rules you (or your vendor) have defined.
-              A new analyst is often surprised by how many of those alerts are false positives.
+              A large part of SOC work revolves around analysing alerts and determining what actually matters.
             </p>
+
+            <p>
+              Through labs and practice, I’ve seen how common false positives are — normal behaviour that
+              appears suspicious at first glance.
+            </p>
+
             <blockquote>
-              Alert fatigue is the enemy. When everything looks urgent, nothing is.
+              When everything looks like a threat, the real ones are easier to miss.
             </blockquote>
+
             <p>
-              Tuning detection rules to reduce noise without missing real threats is one of the most
-              skilled parts of the job — and one of the most underappreciated.
+              This is where analysis becomes important: looking at context, checking logs, and asking the right questions before escalating.
             </p>
 
-            <h2 id="the-human-side">The human side nobody talks about</h2>
+            <h2 id="analysis-process">The analysis process</h2>
+
             <p>
-              What surprised me most when I started was how much communication matters.
-              When you find something that looks like a real incident, you don't just work it silently.
-              You document as you go, you escalate to the right people at the right time,
-              and you often have to explain complex technical findings to non-technical stakeholders
-              in plain language — under pressure.
-            </p>
-            <p>
-              That's a skill set that goes well beyond knowing your tools.
+              Even at a basic level, investigating an alert follows a structured thought process:
             </p>
 
-            <h2 id="entry-level-reality">Entry-level reality check</h2>
+            <ul>
+              <li>What triggered this alert?</li>
+              <li>Is this normal behaviour for this system or user?</li>
+              <li>Is there any evidence of compromise?</li>
+            </ul>
+
             <p>
-              Coming in as a Tier 1 analyst, the bulk of your work is triage. You're the first pair
-              of eyes on most alerts. You learn to quickly assess: is this a real threat, a misconfigured
-              rule, or just normal business activity that looks suspicious to the SIEM?
+              This is something I’ve been actively developing through hands-on exercises,
+              where the goal isn’t just to find answers, but to think clearly under uncertainty.
             </p>
+
+            <h2 id="human-side">The human side</h2>
+
             <p>
-              It's repetitive in places. But every few weeks, you'll work something genuinely interesting —
-              a lateral movement pattern that almost slipped through, a phishing campaign that targeted
-              your organisation specifically, a misconfigured S3 bucket that nobody knew was public.
-              Those are the moments that make the repetition worth it.
+              One thing that stands out is that SOC work isn’t just technical.
+            </p>
+
+            <p>
+              Clear communication matters — documenting findings, explaining decisions,
+              and sometimes translating technical issues into something others can understand.
+            </p>
+
+            <p>
+              It’s a mix of technical skill and structured thinking.
+            </p>
+
+            <h2 id="what-im-building">What I’m building towards</h2>
+
+            <p>
+              Right now, my focus is on strengthening skills in:
+            </p>
+
+            <ul>
+              <li>Threat detection</li>
+              <li>Log analysis</li>
+              <li>SIEM fundamentals</li>
+              <li>Understanding real-world attack behaviour</li>
+            </ul>
+
+            <p>
+              The more I learn, the clearer it becomes that a SOC isn’t about reacting to everything —
+              it’s about making the right decisions with the information available.
+            </p>
+
+            <h2 id="final-thoughts">Final thoughts</h2>
+
+            <p>
+              A SOC isn’t just about stopping attacks in real time.
+              It’s about understanding systems, analysing behaviour, and improving detection over time.
+            </p>
+
+            <p>
+              And that’s exactly what I’m continuing to build towards.
             </p>
 
             <p style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border); color:var(--ink-faint); font-size:14px;">
-              Have questions about breaking into SOC work, or want to share your own experience?
-              <a href="../contact.html">Get in touch</a> — or <a href="../ask.html">ask my AI</a>.
+              Want to connect or talk cybersecurity?
+              <a href="../contact.html">Reach out</a>.
             </p>
+
           </div>
         </article>
 
@@ -115,15 +169,21 @@
             <ul class="toc-list">
               <li><a href="#what-soc-does">What a SOC actually does</a></li>
               <li><a href="#the-alert-queue">The alert queue</a></li>
-              <li><a href="#the-human-side">The human side</a></li>
-              <li><a href="#entry-level-reality">Entry-level reality check</a></li>
+              <li><a href="#analysis-process">The analysis process</a></li>
+              <li><a href="#human-side">The human side</a></li>
+              <li><a href="#what-im-building">What I’m building</a></li>
             </ul>
           </div>
+
           <div class="sidebar-card">
             <p class="sidebar-card__label">Written by</p>
             <p style="font-size:14px; font-weight:500; margin-bottom:4px;">Mavuso Williams</p>
-            <p style="font-size:13px; color:var(--ink-faint); margin-bottom:10px;">SOC Analyst · Cape Town</p>
-            <a href="../about.html" style="font-family:var(--font-mono); font-size:12px; color:var(--purple);">Read full bio →</a>
+            <p style="font-size:13px; color:var(--ink-faint); margin-bottom:10px;">
+              Cybersecurity | SOC Path · Cape Town
+            </p>
+            <a href="../about.html" style="font-family:var(--font-mono); font-size:12px; color:var(--purple);">
+              Read full bio →
+            </a>
           </div>
         </aside>
 
@@ -138,7 +198,5 @@
     </div>
   </footer>
 
-  <script src="../js/main.js"></script>
-  <script src="../js/blog.js"></script>
 </body>
 </html>
